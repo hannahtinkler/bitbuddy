@@ -30,7 +30,7 @@ class LinkedPullRequests {
 
             contentElement.innerHTML = '';
 
-            if (data.length) {
+            if (data) {
                 data.forEach(pullRequest => {
                     if (pullRequest.source.branch.name == this.branch && pullRequest.id != this.pullRequestId) {
                         contentElement.innerHTML += `<p><a href="${ pullRequest.links.html.href }/activity" target="_blank">${ pullRequest.title } (${ pullRequest.state })</a></p>`
