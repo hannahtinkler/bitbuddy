@@ -1,0 +1,36 @@
+{
+  "name": "Bitbuddy",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Empty",
+  "homepage_url": "http://e3creative.co.uk",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "contentSettings",
+    "cookies",
+    "https://api.bitbucket.org/2.0/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bitbucket.org/e3creative/*/pull-requests*"
+      ],
+      "css": [
+        "build/css/main.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://bitbucket.org/*"
+      ],
+      "js": [
+        "build/js/main.js"
+      ]
+    }
+  ]
+}

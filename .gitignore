@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+config/*.js
+!config/*.example.js
+_locales
+build
+**/.DS_Store
