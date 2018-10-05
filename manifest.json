@@ -2,7 +2,7 @@
   "name": "Bitbuddy",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Empty",
+  "description": "Bitbucket helper extension for Chrome",
   "homepage_url": "http://e3creative.co.uk",
   "icons": {
     "16": "icons/icon16.png",
