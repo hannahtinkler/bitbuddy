@@ -4,7 +4,7 @@
 
 * Download this repository
 * Navigate to the repo in your terminal
-* Run `cp js/config.example.js js/config.js` and update the contents with your bitbucket credentials
+* Run `cp config/bitbucket.example.js config/bitbucket.js` and update the contents with your bitbucket credentials
 * Run `yarn`
 * Run `yarn prod` to build assets, or `yarn watch` if you want to update your build as you change code
 * Go to chrome://extensions/ in your browser
