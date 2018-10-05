@@ -26,7 +26,6 @@ class LinkedPullRequests {
 
     loaded() {
         this.api.getPullRequests({ repo: this.repo }, data => {
-            console.log(data)
             let contentElement = document.querySelector('.js-linked')
 
             contentElement.innerHTML = '';
@@ -37,7 +36,8 @@ class LinkedPullRequests {
                         contentElement.innerHTML += `<p><a href="${ pullRequest.links.html.href }/activity" target="_blank">${ pullRequest.title } (${ pullRequest.state })</a></p>`
                     }
                 })
-            } else {
+            }
+            if (!contentElement.innerHTML) {
                 contentElement.innerHTML += `<span class="empty">n/a</span>`
             }
         });
