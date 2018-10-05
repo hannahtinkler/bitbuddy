@@ -2,9 +2,11 @@ import BitbucketApi from './../core/BitbucketApi';
 
 class LinkedPullRequests {
     constructor() {
-        if (this.isPullRequestPage()) {
+        this.valid = this.validate();
+
+        if (this.valid) {
             this.init()
-            this.loaded = this.loaded.bind(this)
+            this.run = this.run.bind(this)
         }
     }
 
@@ -20,11 +22,11 @@ class LinkedPullRequests {
         this.pullRequestId = pullRequestElement.getAttribute('data-local-id')
     }
 
-    boot() {
+    prepare() {
         this.appendLinkedSection()
     }
 
-    loaded() {
+    run() {
         this.api.getPullRequests({ repo: this.repo }, data => {
             let contentElement = document.querySelector('.js-linked')
 
@@ -43,7 +45,7 @@ class LinkedPullRequests {
         });
     }
 
-    isPullRequestPage() {
+    validate() {
         return document.querySelectorAll('.pull-request-self-link').length
     }
 

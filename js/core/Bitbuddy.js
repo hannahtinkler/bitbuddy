@@ -1,28 +1,27 @@
 class Bitbuddy {
     constructor(modules) {
-        this.modules = modules;
-
-        this.triggerBoot();
+        this.modules = modules.filter(module => module.valid);
 
         this.init = this.init.bind(this)
-        this.triggerLoaded = this.triggerLoaded.bind(this)
+        this.runModules = this.runModules.bind(this)
+
+        this.prepareModules();
 
         chrome.extension.sendMessage({}, this.init());
     }
 
     init() {
-        this.triggerLoaded();
-        this.checkReadyState = setInterval(this.triggerLoaded, 1)
+        this.checkCanRunModules = setInterval(this.runModules, 1)
     }
 
-    triggerBoot() {
-        this.modules.forEach(module => module.boot())
+    prepareModules() {
+        this.modules.forEach(module => module.prepare())
     }
 
-    triggerLoaded() {
+    runModules() {
         if (document.readyState === "complete") {
-            clearInterval(this.checkReadyState)
-            this.modules.forEach(module => module.loaded())
+            clearInterval(this.checkCanRunModules)
+            this.modules.forEach(module => module.run())
         }
     }
 }
