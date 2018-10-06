@@ -1,5 +1,10 @@
 # Changelog
 
+
+## [1.3.1] - 2018-10-06
+### Fixes:
+    - the way the repository name is retrieved
+
 ## [1.3.0] - 2018-10-06
 ### Adds:
     - automatic checking 'close branch after pull request is merged' when opening a PR

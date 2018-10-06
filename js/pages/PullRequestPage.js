@@ -19,8 +19,10 @@ class PullRequestPage {
 
     repo() {
         if (!this.elements.repo) {
-            this.elements.repo = document.querySelector('.compare-widget:first-child')
-                ? document.querySelector('.compare-widget:first-child').getAttribute('data-repo-name')
+            let element = document.querySelector('.compare-widget:first-child')
+
+            this.elements.repo = element
+                ? element.getAttribute('data-repo-url').split('/')[2]
                 : 'NO REPO'
         }
 
