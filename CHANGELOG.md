@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.4.1] - 2018-10-06
+### Updates:
+    - the way lines changed is calculated so that it ignores whitespace
+
 ## [1.4.0] - 2018-10-06
 ### Adds:
     - automatic hiding of white-space only changes

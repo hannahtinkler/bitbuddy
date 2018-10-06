@@ -23,7 +23,7 @@ class BitbucketApi {
     }
 
     getDiffStats(params, callback) {
-        let promise = fetch(`${ this.url }/${ params.repo }/diffstat/${ params.from }..${ params.to }`, {
+        let promise = fetch(`${ this.url }/${ params.repo }/diffstat/${ params.from }..${ params.to }?ignore_whitespace=true`, {
             headers: { 'Authorization': `Basic ${ this.token }` }
         })
 
