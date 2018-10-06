@@ -1,7 +1,10 @@
-.mt-1 {
-    margin-top: 10px;
-}
+// Core
+@import 'core/variables';
 
-.additional-summary-item {
-    p { margin-top: 0; }
-}
+// Elements
+@import 'elements/typography';
+@import 'elements/pull-request-summary';
+
+// Modules
+@import 'modules/collapse-ignored-files';
+@import 'modules/pull-request-flags';

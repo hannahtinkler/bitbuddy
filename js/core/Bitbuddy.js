@@ -15,13 +15,21 @@ class Bitbuddy {
     }
 
     prepareModules() {
-        this.modules.forEach(module => module.prepare())
+        this.modules.forEach(module => {
+            if (typeof module.prepare == 'function') {
+                module.prepare()
+            }
+        })
     }
 
     runModules() {
         if (document.readyState === "complete") {
             clearInterval(this.checkCanRunModules)
-            this.modules.forEach(module => module.run())
+            this.modules.forEach(module => {
+                if (typeof module.run == 'function') {
+                    module.run()
+                }
+            })
         }
     }
 }

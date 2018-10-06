@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
+    "eventbusjs": "^0.2.0",
     "laravel-mix": "^2.1.14"
   }
 }

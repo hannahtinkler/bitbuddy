@@ -14,10 +14,34 @@ class BitbucketApi {
         this.handleResponse(promise, callback)
     }
 
+    getPullRequestById(params, callback) {
+        let promise = fetch(`${ this.url }/${ params.repo }/pullrequests/${ params.id }`, {
+            headers: { 'Authorization': `Basic ${ this.token }` }
+        })
+
+        this.handleResponse(promise, callback)
+    }
+
+    getDiffStats(params, callback) {
+        let promise = fetch(`${ this.url }/${ params.repo }/diffstat/${ params.from }..${ params.to }`, {
+            headers: { 'Authorization': `Basic ${ this.token }` }
+        })
+
+        this.handleResponse(promise, callback)
+    }
+
+    getCommits(params, callback) {
+        let promise = fetch(`${ this.url }/${ params.repo }/pullrequests/${ params.id }/commits`, {
+            headers: { 'Authorization': `Basic ${ this.token }` }
+        })
+
+        this.handleResponse(promise, callback)
+    }
+
     handleResponse(promise, callback) {
         promise
             .then(response => response.json())
-            .then(json => json.values)
+            .then(json => json.values ? json.values : json)
             .then(data => callback(data))
     }
 }

@@ -1,6 +1,9 @@
 # bitbuddy
 
-## Installation
+
+## How to
+
+### Installation
 
 * Download this repository
 * Navigate to the repo in your terminal
@@ -13,7 +16,7 @@
 * Navigate into this repository's directory in the finder window and click the 'select' button
 
 
-## Getting updates
+### Getting updates
 
 * Pull the latest changes from the repository
 * Run `yarn`
@@ -22,3 +25,18 @@
 * Click the refresh button on the extension card (its a circular arrow)
 
 
+## Features
+
+### Pull Requests
+
+#### Linked PRs
+Shows other pull requests made against the branch of the pull request you are currently viewing. Adds the 'self-declined' status which indicates a PR that was closed by the author rather than by a reviewer. Displays this info in the pull request summary area.
+
+#### Collapsible Diffs
+Adds buttons to each file diff in a pull request that allows you to collapse and re-expand the file diff. Automatically collapses composer.json and package-lock.json files
+
+#### Lines Changed
+Shows the total lines changed in a pull request. Displays this info in the pull request summary area.
+
+#### Flags
+Adds flags to the summary area that highlight missing tests, incorrect branch names and commits, and the disciplines that the changes pertain to (e.g. backend, frontend and mobile development)
