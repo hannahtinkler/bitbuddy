@@ -40,3 +40,6 @@ Shows the total lines changed in a pull request. Displays this info in the pull 
 
 #### Flags
 Adds flags to the summary area that highlight missing tests, incorrect branch names and commits, and the disciplines that the changes pertain to (e.g. backend, frontend and mobile development)
+
+#### Automatically opt to close source branch
+Automatically checks 'close branch after pull request is merged' when opening a PR

@@ -5,11 +5,13 @@ import DiffLoadedEvent from './modules/DiffLoadedEvent'
 import PullRequestFlags from './modules/PullRequestFlags'
 import LinkedPullRequests from './modules/LinkedPullRequests'
 import PullRequestLinesChanged from './modules/PullRequestLinesChanged'
+import AutomaticallyCheckCloseBranch from './modules/AutomaticallyCheckCloseBranch'
 
 new Bitbuddy([
     new DiffLoadedEvent,
     new CollapsibleDiffs,
-    new PullRequestLinesChanged,
     new LinkedPullRequests,
+    new PullRequestLinesChanged,
     new PullRequestFlags,
+    new AutomaticallyCheckCloseBranch,
 ]);
