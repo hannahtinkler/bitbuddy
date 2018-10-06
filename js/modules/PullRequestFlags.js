@@ -37,7 +37,7 @@ class PullRequestFlags {
     }
 
     determineValidBranchNameFlag() {
-        let validBranch = this.page.branch().includes(this.page.ticket())
+        let validBranch = this.page.branch().includes(this.page.ticket()) || this.page.branch().includes(this.page.ticket().toLowerCase())
 
         this.appendFlag('Branch', validBranch ? 'success' : 'error')
     }

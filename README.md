@@ -30,7 +30,7 @@
 ### Pull Requests
 
 #### Linked PRs
-Shows other pull requests made against the branch of the pull request you are currently viewing. Adds the 'self-declined' status which indicates a PR that was closed by the author rather than by a reviewer. Displays this info in the pull request summary area.
+Shows other pull requests made against the branch or Jira ticket of the pull request you are currently viewing. Adds the 'self-declined' status which indicates a PR that was closed by the author rather than by a reviewer. Displays this info in the pull request summary area.
 
 #### Collapsible Diffs
 Adds buttons to each file diff in a pull request that allows you to collapse and re-expand the file diff. Automatically collapses composer.json and package-lock.json files

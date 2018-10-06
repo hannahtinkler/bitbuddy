@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.1] - 2018-10-06
+### Fixes:
+    - PRs being flagged with invalid branch names if the branch ticket was in lowercase
+
+## [1.2.0] - 2018-10-06
+### Adds:
+    - links pull requests to jira tickets as well as source branch
+    - makes file diffs collapsible, and automatically collapses files in config/ignore-files.js
+    - pull request flags in the summary area, highlighting key facts
+    - 'lines changed` in PR summary
+
 ## [1.1.0] - 2018-10-05
 ### Fixes:
     - modules running on pages they should not by adding validation
