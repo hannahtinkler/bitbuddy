@@ -61,8 +61,10 @@ class LinkedPullRequests {
     }
 
     matchesPullRequest(pullRequest) {
-        let ticketMatches = pullRequest.title.includes(`${ this.page.ticket() } `)
         let branchMatches = pullRequest.source.branch.name == this.page.branch()
+
+        let ticketMatches = pullRequest.title.includes(`${ this.page.ticket() } `)
+            || pullRequest.title.split('/')[1] == this.page.ticket()
 
         return pullRequest.id != this.page.id() && (ticketMatches || branchMatches)
     }
