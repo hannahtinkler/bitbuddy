@@ -43,3 +43,6 @@ Adds flags to the summary area that highlight missing tests, incorrect branch na
 
 #### Automatically opt to close source branch
 Automatically checks 'close branch after pull request is merged' when opening a PR
+
+#### Automatically hide white space changes on PR load
+Will automatically redirect to the whitespace-hidden version of the PR. The user can still view the version with whitespace by clicking the 'show whitespace' button

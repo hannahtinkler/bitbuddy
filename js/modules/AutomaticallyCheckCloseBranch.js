@@ -1,6 +1,5 @@
 import Eventbus from 'eventbusjs'
 import ignoredFiles from './../../config/ignored-files'
-import PullRequestPage from './../pages/PullRequestPage'
 
 class AutomaticallyCheckCloseBranch {
     constructor() {

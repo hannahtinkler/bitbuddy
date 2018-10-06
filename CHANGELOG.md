@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.4.0] - 2018-10-06
+### Adds:
+    - automatic hiding of white-space only changes
+
 ## [1.3.2] - 2018-10-06
 ### Fixes:
     - the way the branch names are matches on ticket
