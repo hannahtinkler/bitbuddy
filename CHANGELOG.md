@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.4.2] - 2018-10-8
+### Adds:
+    - the ignored files config file
+
 ## [1.4.1] - 2018-10-06
 ### Updates:
     - the way lines changed is calculated so that it ignores whitespace
