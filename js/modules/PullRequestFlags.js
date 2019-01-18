@@ -75,7 +75,12 @@ class PullRequestFlags {
         let isBackEnd = Array.from(document.querySelectorAll('.commentable-diff')).reduce((carry, container) => {
             let filename = this.getFilename(container)
 
-            return filename.includes('.php') || filename.includes('.sql') ? true : carry
+            return (
+                    filename.includes('.php')
+                    || filename.includes('.sql')
+                ) && !container.getAttribute('data-identifier').includes('wp-')
+                ? true
+                : carry
         }, false)
 
         isBackEnd ? this.appendFlag('Back-end', 'subtle') : null
@@ -85,7 +90,13 @@ class PullRequestFlags {
         let isFrontEnd = Array.from(document.querySelectorAll('.commentable-diff')).reduce((carry, container) => {
             let filename = this.getFilename(container)
 
-            return (filename.includes('.js') && !filename.includes('.json')) || filename.includes('.html') || filename.includes('.scss') ? true : carry
+            return (
+                    (filename.includes('.js') && !filename.includes('.json'))
+                    || filename.includes('.html')
+                    || filename.includes('.scss')
+                )
+                    ? true
+                    : carry
         }, false)
 
         isFrontEnd ? this.appendFlag('Front-end', 'subtle') : null

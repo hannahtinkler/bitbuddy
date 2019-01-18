@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.5.1] - 2019-01-18
+### Add:
+    - Dont show backend flag if only files are in wp-themes
+
 ## [1.5.0] - 2019-01-18
 ### Add:
     - Wordpress flag
