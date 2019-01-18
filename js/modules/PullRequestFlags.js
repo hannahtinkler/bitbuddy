@@ -31,6 +31,7 @@ class PullRequestFlags {
         this.determineValidBranchNameFlag()
         this.determineValidCommitsFlag()
         this.addTestsFlag()
+        this.determineWordpressFlag()
         this.determineBackEndFlag()
         this.determineFrontEndFlag()
         this.determineMobileFlag()
@@ -60,6 +61,14 @@ class PullRequestFlags {
         }, false)
 
         this.appendFlag('Tests', hasTests ? 'success' : 'error')
+    }
+
+    determineWordpressFlag() {
+        let isWordpress = Array.from(document.querySelectorAll('.commentable-diff')).reduce((carry, container) => {
+            return container.getAttribute('data-identifier').includes('wp-');
+        }, false)
+
+        isWordpress ? this.appendFlag('Wordpress', 'subtle') : null
     }
 
     determineBackEndFlag() {

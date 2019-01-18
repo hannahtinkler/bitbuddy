@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.5.0] - 2019-01-18
+### Add:
+    - Wordpress flag
+
 ## [1.4.3] - 2019-01-18
 ### Updates:
     - Don't show tests flag if the test was deleted
