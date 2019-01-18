@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.4.3] - 2019-01-18
+### Updates:
+    - Don't show tests flag if the test was deleted
+
 ## [1.4.2] - 2018-10-8
 ### Adds:
     - the ignored files config file

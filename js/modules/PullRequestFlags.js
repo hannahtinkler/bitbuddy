@@ -54,7 +54,9 @@ class PullRequestFlags {
 
     addTestsFlag() {
         let hasTests = Array.from(document.querySelectorAll('.commentable-diff')).reduce((carry, container) => {
-            return this.getFilename(container).includes('Test.php') ? true : carry
+            if (!container.querySelector('.diff-entry-lozenge').innerHTML.includes('Deleted')) {
+                return this.getFilename(container).includes('Test.php') ? true : carry
+            }
         }, false)
 
         this.appendFlag('Tests', hasTests ? 'success' : 'error')
